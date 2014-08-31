@@ -1,0 +1,49 @@
+                  Prefix Verb   URI Pattern                            Controller#Action
+        new_user_session GET    /users/sign_in(.:format)               devise/sessions#new
+            user_session POST   /users/sign_in(.:format)               devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)              devise/sessions#destroy
+           user_password POST   /users/password(.:format)              devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)          devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)         devise/passwords#edit
+                         PATCH  /users/password(.:format)              devise/passwords#update
+                         PUT    /users/password(.:format)              devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)                devise/registrations#cancel
+       user_registration POST   /users(.:format)                       devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)               devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)                  devise/registrations#edit
+                         PATCH  /users(.:format)                       devise/registrations#update
+                         PUT    /users(.:format)                       devise/registrations#update
+                         DELETE /users(.:format)                       devise/registrations#destroy
+                 kindles GET    /kindles(.:format)                     kindles#index
+                  kindle GET    /kindles/:id(.:format)                 kindles#show
+                         PATCH  /kindles/:id(.:format)                 kindles#update
+                         PUT    /kindles/:id(.:format)                 kindles#update
+                         DELETE /kindles/:id(.:format)                 kindles#destroy
+           book_articles GET    /books/:book_id/articles(.:format)     articles#index
+            book_publish GET    /books/:book_id/publish(.:format)      articles#publish
+                   books GET    /books(.:format)                       books#index
+                    book GET    /books/:id(.:format)                   books#show
+                         PATCH  /books/:id(.:format)                   books#update
+                         PUT    /books/:id(.:format)                   books#update
+                         DELETE /books/:id(.:format)                   books#destroy
+                 article GET    /articles/:id(.:format)                articles#show
+                         PATCH  /articles/:id(.:format)                articles#update
+                         PUT    /articles/:id(.:format)                articles#update
+                         DELETE /articles/:id(.:format)                articles#destroy
+             api_kindles GET    /api/kindles(.:format)                 kindles#index {:format=>:json}
+              api_kindle GET    /api/kindles/:id(.:format)             kindles#show {:format=>:json}
+                         PATCH  /api/kindles/:id(.:format)             kindles#update {:format=>:json}
+                         PUT    /api/kindles/:id(.:format)             kindles#update {:format=>:json}
+                         DELETE /api/kindles/:id(.:format)             kindles#destroy {:format=>:json}
+       api_book_articles GET    /api/books/:book_id/articles(.:format) articles#index {:format=>:json}
+        api_book_publish GET    /api/books/:book_id/publish(.:format)  articles#publish {:format=>:json}
+               api_books GET    /api/books(.:format)                   books#index {:format=>:json}
+                api_book GET    /api/books/:id(.:format)               books#show {:format=>:json}
+                         PATCH  /api/books/:id(.:format)               books#update {:format=>:json}
+                         PUT    /api/books/:id(.:format)               books#update {:format=>:json}
+                         DELETE /api/books/:id(.:format)               books#destroy {:format=>:json}
+             api_article GET    /api/articles/:id(.:format)            articles#show {:format=>:json}
+                         PATCH  /api/articles/:id(.:format)            articles#update {:format=>:json}
+                         PUT    /api/articles/:id(.:format)            articles#update {:format=>:json}
+                         DELETE /api/articles/:id(.:format)            articles#destroy {:format=>:json}
+                    root GET    /                                      books#index

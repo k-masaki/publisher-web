@@ -1,0 +1,21 @@
+%h1 Listing kindles
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th
+    %th
+    %th
+
+  - @kindles.each do |kindle|
+    %tr
+      %td= kindle.name
+      %td= kindle.email
+      %td= link_to 'Show', kindle
+      %td= link_to 'Edit', edit_kindle_path(kindle)
+      %td= link_to 'Destroy', kindle, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Kindle', new_kindle_path

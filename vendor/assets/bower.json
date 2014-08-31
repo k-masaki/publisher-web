@@ -1,0 +1,22 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angular": "latest",
+    "angular-google-maps": "latest",
+    "angular-masonry": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-translate": "latest",
+    "angular-translate-handler-log": "latest",
+    "angular-translate-loader-static-files": "latest",
+    "angular-translate-storage-cookie": "latest",
+    "angular-translate-storage-local": "latest",
+    "angular-ui-bootstrap-bower": "latest",
+    "angular-underscore-module": "latest",
+    "d3": "latest",
+    "dangle": "latest",
+    "ionicons": "latest",
+    "ng-file-upload": "latest",
+    "underscore": "latest"
+  }
+}

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @kindle.user_id
+%p
+  %b Name:
+  = @kindle.name
+%p
+  %b Email:
+  = @kindle.email
+
+= link_to 'Edit', edit_kindle_path(@kindle)
+\|
+= link_to 'Back', kindles_path
